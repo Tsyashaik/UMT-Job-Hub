@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>UMT Job Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="index-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+  <div class="container animate__animated animate__fadeIn">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Job Icon" />
+    <h1 class="animate__animated animate__fadeInDown">UMT Job Hub</h1>
+    <p>Find or post part-time jobs around UMT!</p>
+    <button class="link-btn animate__animated animate__fadeInUp" onclick="window.location.href='login.html'">Login / Register</button>
+    <button id="enterAppBtn" class="alt-btn animate__animated animate__fadeInUp" onclick="window.location.href='home.html'">Enter App</button>
+    <div class="quote animate__animated animate__fadeInUp">“Start small. Dream big. Find the opportunity.”</div>
+  </div>
+  <script>
+    const enterAppBtn = document.getElementById("enterAppBtn");
+    if (localStorage.getItem("isLoggedIn") === "true") {
+      enterAppBtn.style.display = "inline-block";
+    } else {
+      enterAppBtn.style.display = "none";
+    }
+
+    if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(registration => {
+        console.log('✅ Service Worker registered with scope:', registration.scope);
+      })
+      .catch(error => {
+        console.error('❌ Service Worker registration failed:', error);
+      });
+  });
+}
+  </script>
+</body>
+</html>

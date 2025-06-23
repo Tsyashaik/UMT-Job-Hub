@@ -1,0 +1,14 @@
+{
+  "name": "UMT Job Hub",
+  "short_name": "JobHub",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5A189A",
+  "icons": [
+    { 
+    "src": "job hunt.jpg", 
+    "sizes": "192x192", 
+    "type": "image/png" }
+  ]
+}

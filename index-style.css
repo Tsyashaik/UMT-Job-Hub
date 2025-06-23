@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+/* === GLOBAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f3f0ff, #e0d4f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* === CONTAINER === */
+.container {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 25px rgba(90, 24, 154, 0.2);
+  text-align: center;
+  max-width: 600px;
+  width: 90%;
+}
+
+.container img {
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: #5A189A;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #5A189A;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.link-btn, .alt-btn {
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+}
+
+.link-btn {
+  background-color: #9D4EDD;
+}
+
+.alt-btn {
+  background-color: #C77DFF;
+}
+
+.link-btn:hover,
+.alt-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-top: 1.5rem;
+  color: #7b2cbf;
+}

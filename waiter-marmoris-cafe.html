@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cashier - CU Mart</title>
+  <link rel="stylesheet" href="style/styles.css" />
+</head>
+<body>
+
+  <!-- ✅ NAVIGATION BAR -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <div class="logo">UMT Job Hub</div>
+    </div>
+    <div class="navbar-right">
+      <a href="home.html">Home</a>
+      <a href="listJobs.html">List Jobs</a>
+      <a href="postJob.html">Post Job</a>
+      <a href="#">View Job</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="details-container">
+  <h1>Cashier - CU Mart</h1>
+  <img src="CU MART UMT.png"  alt="Marmoris House" style="width:100%; max-width:300px;" />
+  <p><strong>Position:</strong>Waiter</p>
+  <p><strong>Company Name:</strong>Marmoris Cafe UMT</p>
+  <p><strong>Type:</strong>Freelance</p>
+  <p><strong>Location:</strong> Capital O 90434 Marmoris House, 21300 Kuala Terengganu, Terengganu </p>
+  <p><strong>Salary Range:</strong>RM2000</p>
+  <p><strong>Requirements:</strong>patience, soft spoken, extroverted</p>
+  <p><strong>Benefits:</strong>Accommodation is provided</p>
+  <p><strong>Application Deadline:</strong>5/7/2025</p>
+  <a href="listJobs.html">⬅ Back to Job Listings</a>
+
+  <!-- ✅ FOOTER -->
+ <div class="footer">&copy; 2025 UMT Job Hub. Designed for Front-End Assignment.</div>
+
+
+ <script>
+    const username = localStorage.getItem("username") || "User";
+    document.getElementById("usernameDisplay").textContent = username;
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("username");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

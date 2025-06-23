@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Waiter - Faris Bistro</title>
+  <link rel="stylesheet" href="style/styles.css" />
+</head>
+<body>
+
+  <!-- ✅ NAVIGATION BAR -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <div class="logo">UMT Job Hub</div>
+    </div>
+    <div class="navbar-right">
+      <a href="home.html">Home</a>
+      <a href="listJobs.html">List Jobs</a>
+      <a href="postJob.html">Post Job</a>
+      <a href="#">View Job</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="details-container">
+  <h1>Waiter - Faris Bistro</h1>
+  <img src="FARIS BISTRO UMT.jpg"  alt="Faris Bistro" style="width:100%; max-width:300px;" />
+  <p><strong>Position:</strong>Waiter</p>
+  <p><strong>Company Name:</strong>Faris Bistro</p>
+  <p><strong>Type:</strong>Part-time</p>
+  <p><strong>Location:</strong> Faris Bistro, Universiti Malaysia Terengganu, 21300 Kuala Terengganu, Terengganu </p>
+  <p><strong>Salary Range:</strong>RM800-RM1000</p>
+  <p><strong>Requirements:</strong>student, know how to manage time </p>
+  <p><strong>Benefits:</strong>bonus by month</p>
+  <p><strong>Application Deadline:</strong>10/7/2025</p>
+  <a href="listJobs.html">⬅ Back to Job Listings</a>
+
+  <!-- ✅ FOOTER -->
+  <div class="footer">&copy; 2025 UMT Job Hub. Designed for Front-End Assignment.</div>
+
+  <script>
+    const username = localStorage.getItem("username") || "User";
+    document.getElementById("usernameDisplay").textContent = username;
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("username");
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>

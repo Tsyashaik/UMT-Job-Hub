@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Staff - Umi Cafe</title>
+  <link rel="stylesheet" href="style/styles.css" />
+</head>
+<body>
+
+  <!-- ✅ NAVIGATION BAR -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <div class="logo">UMT Job Hub</div>
+    </div>
+    <div class="navbar-right">
+      <a href="home.html">Home</a>
+      <a href="listJobs.html">List Jobs</a>
+      <a href="postJob.html">Post Job</a>
+      <a href="#">View Job</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="details-container">
+  <h1>Staff - Umi Cafe</h1>
+  <img src="UMI CAFE UMT.jpg"  alt="Umi Cafe" style="width:100%; max-width:300px;" />
+  <p><strong>Position:</strong>Staff</p>
+  <p><strong>Company Name:</strong>Umi Cafe</p>
+  <p><strong>Type:</strong>Part-time</p>
+  <p><strong>Location:</strong> Umi Cafe Kafeteria Abdul Rahman Limbong, 21300 Kuala Terengganu, Terengganu </p>
+  <p><strong>Salary Range:</strong>RM2500-RM3000</p>
+  <p><strong>Requirements:</strong>Diploma Holder, responsible</p>
+  <p><strong>Benefits:</strong>food and beverages provided</p>
+  <p><strong>Application Deadline:</strong>10/7/2025</p>
+  <a href="listJobs.html">⬅ Back to Job Listings</a>
+
+  <!-- ✅ FOOTER -->
+  <div class="footer">&copy; 2025 UMT Job Hub. Designed for Front-End Assignment.</div>
+
+  <script>
+    const username = localStorage.getItem("username") || "User";
+    document.getElementById("usernameDisplay").textContent = username;
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("username");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

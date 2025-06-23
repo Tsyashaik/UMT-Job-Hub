@@ -1,0 +1,115 @@
+/* === LOGIN PAGE CONTAINER === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f0ff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  background: #ffffffee;
+  border-radius: 1rem;
+  box-shadow: 0 12px 40px rgba(90, 24, 154, 0.2);
+  text-align: center;
+  animation: fadeInUp 0.8s ease;
+}
+
+.login-wrapper img {
+  width: 90px;
+  margin-bottom: 1rem;
+  animation: floatBlob 5s infinite ease-in-out;
+}
+
+.login-wrapper h2 {
+  font-size: 1.6rem;
+  color: #5A189A;
+  margin-bottom: 0.3rem;
+}
+
+.login-wrapper p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+button {
+  background: linear-gradient(to right, #7B2CBF, #9D4EDD);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(90, 24, 154, 0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #5A189A, #7B2CBF);
+}
+
+/* Background decorative blobs */
+.blob {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(155, 89, 182, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: floatBlob 8s ease-in-out infinite;
+}
+
+.blob1 {
+  top: 50%;
+  left: 20%;
+}
+
+.blob2 {
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatBlob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+}

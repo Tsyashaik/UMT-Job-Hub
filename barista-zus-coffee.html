@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Barista - ZUS Coffee</title>
+  <link rel="stylesheet" href="style/styles.css" />
+</head>
+<body>
+
+  <!-- ✅ NAVIGATION BAR -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <div class="logo">UMT Job Hub</div>
+    </div>
+    <div class="navbar-right">
+      <a href="home.html">Home</a>
+      <a href="listJobs.html">List Jobs</a>
+      <a href="postJob.html">Post Job</a>
+      <a href="#">View Job</a>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="details-container">
+  <h1>Barista - ZUS Coffee</h1>
+  <img src="ZUS COFFEE UMT.jpg" alt="ZUS Coffee" style="width:100%; max-width:300px;" />
+  <p><strong>Position:</strong>Barista</p>
+  <p><strong>Company Name:</strong>Zus Coffee</p>
+  <p><strong>Type:</strong>Part-time</p>
+  <p><strong>Location:</strong> Lot 021, Aras Bawah, Kompleks Siswa, Universiti Malaysia Terengganu, 21030 Kuala Terengganu, Terengganu</p>
+  <p><strong>Salary Range:</strong>RM1500-RM1800</p>
+  <p><strong>Requirements:</strong>SPM, someone who loves coffee</p>
+  <p><strong>Benefits:</strong>got to drink zus coffee for free</p>
+  <p><strong>Application Deadline:</strong>30/7/2025</p>
+  <a href="listJobs.html">⬅ Back to Job Listings</a>
+
+  <!-- ✅ FOOTER -->
+  <div class="footer">&copy; 2025 UMT Job Hub. Designed for Front-End Assignment.</div>
+
+
+  <script>
+    const username = localStorage.getItem("username") || "User";
+    document.getElementById("usernameDisplay").textContent = username;
+    function logout() {
+      localStorage.removeItem("isLoggedIn");
+      localStorage.removeItem("username");
+      window.location.href = "index.html";
+    }
+  </script>
+  
+</body>
+</html>
